@@ -1,0 +1,26 @@
+<div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+    <mat-grid-list fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)" cols="2">
+        <mat-grid-tile colspan = '1'>
+            <div class="container">
+                <mat-card  class="example-card">
+                    
+                    <mat-card-title>Search for  English movies/series By title</mat-card-title>
+                    <mat-card-content>
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Search For Title</mat-label>
+                            <input matInput name="searchData" (input)="onChange($event)" [(ngModel)]="searchData" placeholder="Search">
+                            <mat-icon matSuffix (click)="onSearch(searchData)" >search</mat-icon>
+                        </mat-form-field>
+                      
+                    </mat-card-content>
+                    
+                  </mat-card>
+            </div>
+            
+        </mat-grid-tile>
+        <mat-grid-tile colspan = '1' >
+            <iframe src="http://localhost:4201" class="container"  #iframe (load)="onLoad(iframe)"></iframe>
+        </mat-grid-tile>
+      </mat-grid-list>
+</div>    
+   
