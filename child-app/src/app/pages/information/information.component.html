@@ -1,0 +1,51 @@
+<div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10" class="container">
+    <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)" class="example-card">
+
+        <mat-card-title>Information About {{informationDetails.Title}}</mat-card-title>
+        <mat-card-content>
+            <mat-grid-list *ngIf="informationDetails.Title" cols="2">
+                <mat-grid-tile colspan='1'>
+                    <div class="container">
+                        <img [src]="informationDetails.Poster" height="400" width="400">
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile colspan='1'>
+                    <div class="container">
+                        <mat-list>
+                            <div mat-subheader>Details</div>
+                            <mat-list-item>
+                                <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
+                                <div mat-line>{{informationDetails.Title}}</div>
+                                <div mat-line> {{informationDetails.Year}} </div>
+                            </mat-list-item>
+
+                            <mat-list-item>
+                                <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
+                                <div mat-line> Type: {{informationDetails.Type}}</div>
+                                <div mat-line> Runtime: {{informationDetails.Runtime}} </div>
+                            </mat-list-item>
+
+
+                            <mat-list-item>
+                                <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
+                                <div mat-line> Writer: {{informationDetails.Writer}} </div>
+                            </mat-list-item>
+
+                        </mat-list>
+
+                        <span> <b>Actors: </b> {{informationDetails.Actors}}</span> <br>
+
+                        <span> <b>Plot:</b> {{informationDetails.Plot}}</span>
+
+
+                    </div>
+                </mat-grid-tile>
+
+            </mat-grid-list>
+
+
+
+        </mat-card-content>
+
+    </mat-card>
+</div>
